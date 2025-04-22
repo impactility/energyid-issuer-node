@@ -11,8 +11,9 @@ export enum CredentialStatusType {
 }
 
 export enum Method {
+  energy = "energy",
   iden3 = "iden3",
-  polygonid = "polygonid",
+  // polygonid = "polygonid",
 }
 
 export type Network = {

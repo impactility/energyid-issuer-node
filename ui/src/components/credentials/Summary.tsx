@@ -101,7 +101,7 @@ export function Summary({ linkID }: { linkID: string }) {
             {
               children: (
                 <QRTab
-                  description="When the recipient interacts with the universal link, it will launch the Privado ID web or mobile wallet interface, displaying the credential offer."
+                  description="When the recipient interacts with the universal link, it will launch the Energy ID web or mobile wallet interface, displaying the credential offer."
                   fileName="Universal link"
                   link={authMessage.data.universalLink}
                   openable={true}

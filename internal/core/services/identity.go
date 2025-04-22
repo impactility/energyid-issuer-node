@@ -1086,6 +1086,10 @@ func (i *identity) addGenesisClaimsToTree(ctx context.Context,
 		return nil, nil, fmt.Errorf("can't add get current state from merkle tree: %w", err)
 	}
 
+	// Added this to make it work for energy did method
+	registerDIDMethod := core.RegisterDIDMethod(didOptions.Method, 0b00000100)
+	fmt.Println("RegisterDIDMethod:", registerDIDMethod)
+
 	// TODO: add config options for blockchain and net
 	didType, err := core.BuildDIDType(didOptions.Method, didOptions.Blockchain, didOptions.Network)
 	if err != nil {
