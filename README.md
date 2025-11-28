@@ -1,9 +1,11 @@
-# Privado ID Issuer Node
+# EnergyID Issuer Node
+
+![EnergyID Logo](docs/assets/img/energyid-logo.svg)
 
 [![Checks](https://github.com/0xPolygonID/sh-id-platform/actions/workflows/checks.yml/badge.svg)](https://github.com/0xPolygonID/sh-id-platform/actions/workflows/checks.yml)
 [![golangci-lint](https://github.com/0xPolygonID/sh-id-platform/actions/workflows/golangci-lint.yml/badge.svg)](https://github.com/0xPolygonID/sh-id-platform/actions/workflows/golangci-lint.yml)
 
-Streamline the **Verifiable Credentials issuance** process with the user-friendly API and UI of the Issuer Node within the Privado ID ecosystem. The on-premise (self-hosted) Issuer Node, seamlessly integrated with a robust suite of tools including the mobile Wallet, Schema Builder, and Credential Marketplace, guarantees a frictionless experience for effortlessly issuing and verifying credentials.
+Streamline the **Verifiable Credentials issuance** process with the user-friendly API and UI of the Issuer Node within the EnergyID ecosystem. The on-premise (self-hosted) Issuer Node, seamlessly integrated with a robust suite of tools including the mobile Wallet, Schema Builder, and Credential Marketplace, guarantees a frictionless experience for effortlessly issuing and verifying credentials.
 
 ![Triagle-of-trust](docs/assets/img/triangle-of-trust.png)
 
@@ -20,7 +22,7 @@ Streamline the **Verifiable Credentials issuance** process with the user-friendl
 ---
 
 ## Table of Contents
-- [Privado ID Issuer Node](#privado-id-issuer-node)
+- [EnergyID Issuer Node](#energyid-issuer-node)
   - [Table of Contents](#table-of-contents)
   - [Quick Start Installation](#quick-start-installation)
     - [Prerequisites](#prerequisites)
@@ -28,14 +30,11 @@ Streamline the **Verifiable Credentials issuance** process with the user-friendl
     - [Install and run Issuer Node API and UI (docker compose and build from source)](#install-and-run-issuer-node-api-and-ui---docker-compose-and-build-from-source)
     - [Running only Issuer Node API (docker compose and build from source)](#running-only-issuer-node-api-docker-compose-and-build-from-source)
   - [KMS Providers Configuration](#kms-providers-configuration)
-  - [Quick Start Demo](#quick-start-demo)
-  - [Documentation](#documentation)
-  - [Tools](#tools)
   - [License](#license)
 
 ## Quick Start Installation
 > [!NOTE]
-> The provided installation guide is **non-production** ready. For production deployments please refer to  [Standalone Mode Guide](https://docs.privado.id/docs/issuer/setup-issuer-core).
+> The provided installation guide is **non-production** ready. For production deployments please refer to  [Standalone Mode Guide].
 >
 > There is no compatibility with Windows environments at this time. While using WSL should be ok, it's not officially supported.
 > 
@@ -249,29 +248,6 @@ transition issuer node states onchain, the command is the same as explained befo
 ```shell
 make private_key <private-key> import-private-key-to-kms
 ```
-
-## Quick Start Demo
-
-This [Quick Start Demo](https://docs.privado.id/docs/quick-start-demo) will walk you through the process of **issuing** and **verifying** your **first credential**.
-
-## Documentation
-
-* [Issuer Node resources](https://docs.privado.id/docs/category/issuer)
-* [Privado ID core concepts](https://docs.privado.id/docs/introduction)
-
-## Tools
-> [!WARNING]
-> **Privado ID Demo Issuer** and **Privado ID Verifier Backend Demo** are for **testing** purposes **only**.
-
-* [Privado ID Schema Explorer](https://tools.privado.id): Browse and reuse community-maintained VC schemas.
-* [Privado ID Schema Builder](https://tools.privado.id/builder): A tool for easy VC schema creation.
-* [Privado ID Demo Issuer](https://user-ui:password-ui@issuer-node-testing.privado.id): A demo version of the Issuer Node in action.
-* [Privado ID Query Builder](https://tools.privado.id/query-builder): Build and customize queries to verify VCs.
-* [Privado ID Verifier Backend Demo](https://verifier-backend.privado.id): Demo of our [reference implementation](https://github.com/0xPolygonID/verifier-backend) of a verifier backend.
-* [Privado ID Web Wallet](https://wallet.privado.id): Identity and credential wallet for web clients.
-* [Privado ID Mobile Wallet for Android](https://play.google.com/store/apps/details?id=id.privado.wallet): Wallet for Android devices.
-* [Privado ID Mobile Wallet for iOS](https://apps.apple.com/us/app/privadoid/id6566184703): Wallet for iOS devices.
-* [Privado ID Marketplace](https://marketplace.privado.id): Explore credentials submitted by trusted issuers.
 
 ## License
 
