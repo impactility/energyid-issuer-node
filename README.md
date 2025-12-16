@@ -5,9 +5,11 @@
 [![Checks](https://github.com/0xPolygonID/sh-id-platform/actions/workflows/checks.yml/badge.svg)](https://github.com/0xPolygonID/sh-id-platform/actions/workflows/checks.yml)
 [![golangci-lint](https://github.com/0xPolygonID/sh-id-platform/actions/workflows/golangci-lint.yml/badge.svg)](https://github.com/0xPolygonID/sh-id-platform/actions/workflows/golangci-lint.yml)
 
+> **Repository**: [https://github.com/impactility/energyid-issuer-node](https://github.com/impactility/energyid-issuer-node)
+
 Streamline the **Verifiable Credentials issuance** process with the user-friendly API and UI of the Issuer Node within the EnergyID ecosystem. The on-premise (self-hosted) Issuer Node, seamlessly integrated with a robust suite of tools including the mobile Wallet, Schema Builder, and Credential Marketplace, guarantees a frictionless experience for effortlessly issuing and verifying credentials.
 
-![Triagle-of-trust](docs/assets/img/triangle-of-trust.png)
+<img src="docs/assets/img/triangle-of-trust.png" alt="Triangle of trust" width="400">
 
 **Features:**
 
@@ -26,7 +28,7 @@ Streamline the **Verifiable Credentials issuance** process with the user-friendl
   - [Table of Contents](#table-of-contents)
   - [Quick Start Installation](#quick-start-installation)
     - [Prerequisites](#prerequisites)
-    - [Run Issuer Node API and UI (docker compose with images from privadoid dockerhub registry)](#run-issuer-node-api-and-ui-docker-compose-with-images-from-privadoid-registry)
+    - [Run Issuer Node API and UI (docker compose with images from DockerHub registry)](#run-issuer-node-api-and-ui-docker-compose-with-images-from-dockerhub-registry)
     - [Install and run Issuer Node API and UI (docker compose and build from source)](#install-and-run-issuer-node-api-and-ui---docker-compose-and-build-from-source)
     - [Running only Issuer Node API (docker compose and build from source)](#running-only-issuer-node-api-docker-compose-and-build-from-source)
   - [KMS Providers Configuration](#kms-providers-configuration)
@@ -53,7 +55,7 @@ Streamline the **Verifiable Credentials issuance** process with the user-friendl
     - [Alchemy](https://www.alchemy.com/)
     - [Infura](https://www.infura.io/)
 
-### Run Issuer Node API and UI (docker compose with images from privadoid registry)
+### Run Issuer Node API and UI (docker compose with images from DockerHub registry)
 To run the issuer node (API and UI) quickly and without too many customizations follow the following steps:
 
 1. Copy the config sample files:
@@ -86,10 +88,10 @@ after a few seconds, the issuer node will be running and you can check the docke
 should see something like this:
 ```shell
 CONTAINER ID   IMAGE                           COMMAND                  CREATED          STATUS                    PORTS                                        NAMES
-6e923fa11228   privadoid/issuernode-ui         "/bin/sh /app/script…"   37 seconds ago   Up 32 seconds (healthy)   0.0.0.0:8088->80/tcp                         issuer-ui-1
-16afc9d66591   privadoid/issuernode-api        "sh -c ./pending_pub…"   37 seconds ago   Up 32 seconds (healthy)                                                issuer-pending_publisher-1
-ceb41877c041   privadoid/issuernode-api        "sh -c ./notificatio…"   37 seconds ago   Up 32 seconds (healthy)                                                issuer-notifications-1
-bd7b69984f1c   privadoid/issuernode-api        "sh -c './migrate &&…"   38 seconds ago   Up 34 seconds (healthy)   0.0.0.0:3001->3001/tcp                       issuer-api-1
+6e923fa11228   issuernode-ui         "/bin/sh /app/script…"   37 seconds ago   Up 32 seconds (healthy)   0.0.0.0:8088->80/tcp                         issuer-ui-1
+16afc9d66591   issuernode-api        "sh -c ./pending_pub…"   37 seconds ago   Up 32 seconds (healthy)                                                issuer-pending_publisher-1
+ceb41877c041   issuernode-api        "sh -c ./notificatio…"   37 seconds ago   Up 32 seconds (healthy)                                                issuer-notifications-1
+bd7b69984f1c   issuernode-api        "sh -c './migrate &&…"   38 seconds ago   Up 34 seconds (healthy)   0.0.0.0:3001->3001/tcp                       issuer-api-1
 25ae0fcac183   postgres:14-alpine              "docker-entrypoint.s…"   38 seconds ago   Up 36 seconds (healthy)   5432/tcp                                     issuer-postgres-1
 a4a1d3ec9159   redis:6-alpine                  "docker-entrypoint.s…"   38 seconds ago   Up 36 seconds (healthy)   6379/tcp                                     issuer-redis-1
 ```
